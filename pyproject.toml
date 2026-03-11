@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "srkan"
+version = "0.0.1"
+authors = [
+    {name = "Marco Bühler", email = "marco.buehler@chem.ethz.ch"},
+]
+description = "Efficient symbolic regression utilizing Kolmogorov Arnold Networks"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "sympy>=1.13.3",
+    "setuptools>=50.0.0",
+    "jax==0.4.37",
+    "optax>=0.2.4",
+    "optimistix>=0.0.10",
+    "sympy2jax>=0.0.6",
+    "chex>=0.1.89",
+    "matplotlib>=3.9.0",
+
+]
+
+[tool.setuptools.packages.find]
+include = ["srkan*", "tests*"]
