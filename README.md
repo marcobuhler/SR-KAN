@@ -21,7 +21,7 @@ import jax.numpy as jnp
 import jax.random as jr
 import numpy as np
 from sklearn.metrics import r2_score
-from symkan import regressor, SympyEvaluator
+from srkan import regressor, SympyEvaluator
 ```
 # 1. Configuration: Enable 64-bit precision for scientific accuracy
 ```python 
