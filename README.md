@@ -1,6 +1,6 @@
 # SR-KAN: Symbolic Regression via Kolmogorov-Arnold Networks
 
-This repo is the code used for the publication KAN-SR: A Kolmogorov-Arnold Network Guided Symbolic Regression Framework (https://arxiv.org/abs/2509.10089). **SR-KAN** is a Symbolic Regression framework built on **JAX**. It leverages the interpretable structure of **Kolmogorov-Arnold Networks (KANs)** combined with physics-inspired simplification strategies (symmetry and separability detection) to recover closed-form mathematical expressions from data.
+This repo is the code used for the publication SR-KAN: A Kolmogorov-Arnold Network Guided Symbolic Regression Framework (10.1016/j.compchemeng.2026.109721). **SR-KAN** is a Symbolic Regression framework built on **JAX**. It leverages the interpretable structure of **Kolmogorov-Arnold Networks (KANs)** combined with physics-inspired simplification strategies (symmetry and separability detection) to recover closed-form mathematical expressions from data.
 
 Unlike black-box models, SR-KAN is designed to discover the underlying governing equations of a system, prioritizing parsimony and physical interpretability.
 
@@ -115,13 +115,17 @@ The `regressor` class offers fine-grained control over the symbolic search. The 
 If you utilized `SR-KAN` for your own academic work, please use the following citation:
 
 ```
-@misc{buhler2025,
-      title={KAN-SR: A Kolmogorov-Arnold Network Guided Symbolic Regression Framework}, 
-      author={Marco Andrea Bühler and Gonzalo Guillén-Gosálbez},
-      year={2025},
-      eprint={2509.10089},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2509.10089}, 
+@article{BUHLER_2026,
+title = {SR-KAN: A Kolmogorov–Arnold Network guided symbolic regression framework},
+journal = {Computers & Chemical Engineering},
+volume = {213},
+pages = {109721},
+year = {2026},
+issn = {0098-1354},
+doi = {https://doi.org/10.1016/j.compchemeng.2026.109721},
+url = {https://www.sciencedirect.com/science/article/pii/S0098135426001742},
+author = {Marco Andrea Bühler and Gonzalo Guillén-Gosálbez},
+keywords = {Symbolic regression, Kolmogorov–Arnold Networks, Feynman-SRSD dataset},
+abstract = {Symbolic regression has recently gained wide interest to simplify the modeling of chemical systems. Existing algorithms are time consuming or may lead to equations that, despite being provided in analytical form, are still hard to interpret due to their complex structure. Here we introduce a novel symbolic regression framework, named SR-KAN, built on Kolmogorov–Arnold Networks (KANs), which follows a divide-and-conquer approach and relies on a library of simple equations to produce expressions that can be more easily interpreted. Our algorithm relies on deep learning techniques, more specific KANs, which are combined with simplification strategies such as translational symmetries and separabilities, and applied to recover ground-truth equations of the Feynman Symbolic Regression for Scientific Discovery (SRSD) dataset. Additionally, we show that by combining the proposed framework with neural controlled differential equations, we are able to model the dynamics of an in-silico bioprocess system precisely, opening the door to the automatic dynamic modeling of other engineering systems.}
 }
 ```
